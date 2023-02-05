@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="text-3xl font-bold">
+    <div className="text-3xl font-bold w-10">
       <h1>HELLODAMN</h1>
     </div>
   )
