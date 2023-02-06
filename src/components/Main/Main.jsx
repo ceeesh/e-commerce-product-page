@@ -13,15 +13,21 @@ const Main = () => {
                     <img src={imageProd1} className="w-full rounded-3xl" />
                 </div>
                 <div className="flex w-full justify-between mt-7 ">
-                    <img src={imageThumb2} className="w-[105px] rounded-2xl"/>
-                    <img src={imageThumb3} className="w-[105px] rounded-2xl"/>
-                    <img src={imageThumb4} className="w-[105px] rounded-2xl"/>
-                    <img src={imageThumb1} className="w-[105px] rounded-2xl"/>
+                    <img src={imageThumb2} className="w-[105px] rounded-2xl" />
+                    <img src={imageThumb3} className="w-[105px] rounded-2xl" />
+                    <img src={imageThumb4} className="w-[105px] rounded-2xl" />
+                    <img src={imageThumb1} className="w-[105px] rounded-2xl" />
                 </div>
 
             </div>
-            <div className="w-[60%] bg-black">
-            Main
+            <div className="w-[60%] flex flex-col p-5 m-10">
+                <p className="text-base text-orange font-medium">Sneaker Company</p>
+                <h1 className="text-6xl font-bold">Fall Limited Edition Sneakers</h1>
+                <p className="text-darkgray font-normal">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <span className="flex text-center">
+                    <p className="font-bold text-2xl">$125.00</p>
+                    <p className="text-orange font-medium text-xl">50%</p>
+                </span>
             </div>
         </div>
     )
