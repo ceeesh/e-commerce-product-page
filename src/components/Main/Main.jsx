@@ -42,10 +42,10 @@ const Main = () => {
                 <h1 className="text-6xl font-bold">Fall Limited Edition Sneakers</h1>
                 <p className="text-darkgray font-normal">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
                 <span className="flex text-center items-center">
-                    <p className="font-bold text-2xl">$125.00</p>
-                    <p className="text-orange font-medium text-xl">50%</p>
+                    <p className="font-bold text-2xl ">$125.00</p>
+                    <p className="text-orange font-medium text-xl ">50%</p>
                 </span>
-                <span>$250.00</span>
+                <span className="text-gray">$250.00</span>
                 <div className="flex w-full">
                     <div className="w-[25%] bg-lightgray flex justify-between h-14 rounded-xl mr-8">
                         <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity === 1 ? null : minusQuantity}>-</button>
@@ -53,7 +53,7 @@ const Main = () => {
                         <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity === 10 ? null : addQuantity}>+</button>
                     </div>
 
-                    <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center" onClick={addToCart}>
+                    <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center clickable" onClick={addToCart}>
                         <button className="flex justify-center items-center text-white"><img src={iconCart} className="text-white mr-3" /> Add to Cart</button>
                     </div>
                 </div>
