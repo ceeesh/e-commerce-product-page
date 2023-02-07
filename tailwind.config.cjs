@@ -11,6 +11,9 @@ module.exports = {
         'darkgray': '#747C8B',
         'lightgray': '#ededed',
         'gray': '#ABB2BF'
+      }, 
+      animation: {
+        'slideDown': 'slide-down 400ms forwards;'
       }
     },
   },

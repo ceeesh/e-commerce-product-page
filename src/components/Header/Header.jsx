@@ -6,7 +6,7 @@ import { Context } from '../context/context'
 import CartModal from './CartModal'
 
 const Header = () => {
-  const { quantity, setQuantity, cartNum, setCartNum } = useContext(Context)
+  const { quantity, setQuantity, cartNum, setCartNum, } = useContext(Context)
   const [cart, setCart] = useState(false)
 
   const openModal = () => {
@@ -41,7 +41,9 @@ const Header = () => {
 
       <div className="">
         <ul className="flex">
-          <button onClick={openModal}><img src={iconCart} className="w-[25px]" /><span className="absolute top-9 text-xs bg text-white bg-orange w-5 rounded">{cartNum}</span></button>
+          <button onClick={openModal}><img src={iconCart} className="w-[25px]" />
+          {cartNum === 0 ? null : (<span className="absolute top-9 text-xs bg text-white bg-orange w-5 rounded">{cartNum}</span>)}
+          </button>
           <button className="ml-7"><img src={avatar} className="w-[45px]" /></button>
         </ul>
       </div>

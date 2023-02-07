@@ -24,8 +24,8 @@ const Main = () => {
     }
 
     return (
-        <div className="container mt-24 mx-40 w-full h-max flex justify-between ">
-            <div className="flex flex-col w-[30%]">
+        <div className="container mt-24 mx-40 w-full h-max flex justify-between font-semibold gap-20">
+            <div className="flex flex-col w-[40%]">
                 <div className="">
                     <img src={imageProd1} className="w-full rounded-3xl" />
                 </div>
@@ -38,19 +38,19 @@ const Main = () => {
 
             </div>
             <div className="w-[60%] flex flex-col p-5 m-10">
-                <p className="text-base text-orange font-medium">SNEAKER COMPANY</p>
-                <h1 className="text-6xl font-bold">Fall Limited Edition Sneakers</h1>
-                <p className="text-darkgray font-normal">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-                <span className="flex text-center items-center">
+                <p className="text-base text-orange font-medium pb-4">SNEAKER COMPANY</p>
+                <h1 className="text-6xl font-bold pb-4">Fall Limited Edition Sneakers</h1>
+                <p className="text-darkgray font-normal pb-4">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <span className="flex text-center items-center pb-4">
                     <p className="font-bold text-2xl ">$125.00</p>
                     <p className="text-orange font-medium text-xl ">50%</p>
                 </span>
-                <span className="text-gray">$250.00</span>
+                <span className="text-gray pb-2">$250.00</span>
                 <div className="flex w-full">
                     <div className="w-[25%] bg-lightgray flex justify-between h-14 rounded-xl mr-8">
-                        <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity === 1 ? null : minusQuantity}>-</button>
+                        <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity < 1 ? null : minusQuantity}>-</button>
                         <span className="w-12 flex justify-center items-center text-1xl h-12">{quantity}</span>
-                        <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity === 10 ? null : addQuantity}>+</button>
+                        <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity > 10 ? null : addQuantity}>+</button>
                     </div>
 
                     <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center clickable" onClick={addToCart}>
