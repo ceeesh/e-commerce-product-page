@@ -1,9 +1,13 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import imageProd1 from '../../../images/image-product-1.jpg'
 import imageThumb2 from '../../../images/image-product-2-thumbnail.jpg'
 import imageThumb3 from '../../../images/image-product-3-thumbnail.jpg'
 import imageThumb4 from '../../../images/image-product-4-thumbnail.jpg'
 import imageThumb1 from '../../../images/image-product-1-thumbnail.jpg'
+import image1 from '../../../images/image-product-1.jpg'
+import image2 from '../../../images/image-product-2.jpg'
+import image3 from '../../../images/image-product-3.jpg'
+import image4 from '../../../images/image-product-4.jpg'
 import iconCart from '../../../images/icon-cart.svg'
 import { Context } from '../context/context'
 import SliderModal from './SliderModal'
@@ -11,6 +15,13 @@ import SliderModal from './SliderModal'
 const Main = () => {
 
     const { quantity, setQuantity, cartNum, setCartNum, sliderModal, setSliderModal } = useContext(Context)
+    const slides = [image1, image2, image3, image4]
+    const [currentIndex, setCurrentIndex] = useState(0)
+    
+    const selectImage = (index) => {
+        setCurrentIndex(index)
+        console.log(currentIndex)
+    }
 
     const addQuantity = () => {
         setQuantity(prevState => prevState + 1)
@@ -32,13 +43,12 @@ const Main = () => {
         <div className="container mt-24 mx-40 w-full h-max flex justify-between font-semibold gap-20">
             <div className="flex flex-col w-[40%]">
                 <div className="">
-                    <img src={imageProd1} className="w-full rounded-3xl cursor-pointer" onClick={openModal}/>
+                    <img src={slides[currentIndex]} className="w-full rounded-3xl cursor-pointer" onClick={openModal} />
                 </div>
                 <div className="flex w-full justify-between mt-7 ">
-                    <img src={imageThumb2} className="w-[105px] rounded-2xl cursor-pointer" />
-                    <img src={imageThumb3} className="w-[105px] rounded-2xl cursor-pointer" />
-                    <img src={imageThumb4} className="w-[105px] rounded-2xl cursor-pointer" />
-                    <img src={imageThumb1} className="w-[105px] rounded-2xl cursor-pointer" />
+                    {slides.map((slide, index) => (
+                        <img src={slide} key={index} className="w-[105px] rounded-2xl cursor-pointer" onClick={() => selectImage(index)}/>
+                    ))}
                 </div>
 
             </div>

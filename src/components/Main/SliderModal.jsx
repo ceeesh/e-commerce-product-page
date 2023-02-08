@@ -15,7 +15,7 @@ import { Context } from '../context/context'
 const SliderModal = () => {
     const { setSliderModal } = useContext(Context)
 
-    const slides = [image1, image2, image3, image4,]
+    const slides = [image1, image2, image3, image4]
     const slidesThumb = [imageThumb1, imageThumb2, imageThumb3, imageThumb4]
     const [currentIndex, setCurrentIndex] = useState(0)
 
