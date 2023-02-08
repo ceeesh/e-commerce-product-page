@@ -27,7 +27,7 @@ const CartModal = () => {
                     <div className="flex mb-5 justify-between items-center">
                         <img src={prodThmb} className="w-[3rem] h-[3rem] rounded block mr-3" />
                         <p className="text-darkgray font-normal text-[0.9rem]">Fall Limited Edition Sneakers $125.00 x <span> {cartNum} </span> <span className="font-bold text-black">${amount}</span></p>
-                        <img src={deleteIcon} className="block clickable" onClick={emptyCart} />
+                        <img src={deleteIcon} className="block cursor-pointer" onClick={emptyCart} />
                     </div>
                     <button className="w-full bg-orange rounded text-white p-3">Checkout</button>
                 </div>

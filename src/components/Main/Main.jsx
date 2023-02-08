@@ -6,10 +6,11 @@ import imageThumb4 from '../../../images/image-product-4-thumbnail.jpg'
 import imageThumb1 from '../../../images/image-product-1-thumbnail.jpg'
 import iconCart from '../../../images/icon-cart.svg'
 import { Context } from '../context/context'
+import SliderModal from './SliderModal'
 
 const Main = () => {
 
-    const { quantity, setQuantity, cartNum, setCartNum } = useContext(Context)
+    const { quantity, setQuantity, cartNum, setCartNum, sliderModal, setSliderModal } = useContext(Context)
 
     const addQuantity = () => {
         setQuantity(prevState => prevState + 1)
@@ -23,17 +24,21 @@ const Main = () => {
         setCartNum(prevState => Number(prevState += quantity))
     }
 
+    const openModal = () => {
+        setSliderModal(prevState => !prevState)
+    }
+
     return (
         <div className="container mt-24 mx-40 w-full h-max flex justify-between font-semibold gap-20">
             <div className="flex flex-col w-[40%]">
                 <div className="">
-                    <img src={imageProd1} className="w-full rounded-3xl" />
+                    <img src={imageProd1} className="w-full rounded-3xl cursor-pointer" onClick={openModal}/>
                 </div>
                 <div className="flex w-full justify-between mt-7 ">
-                    <img src={imageThumb2} className="w-[105px] rounded-2xl" />
-                    <img src={imageThumb3} className="w-[105px] rounded-2xl" />
-                    <img src={imageThumb4} className="w-[105px] rounded-2xl" />
-                    <img src={imageThumb1} className="w-[105px] rounded-2xl" />
+                    <img src={imageThumb2} className="w-[105px] rounded-2xl cursor-pointer" />
+                    <img src={imageThumb3} className="w-[105px] rounded-2xl cursor-pointer" />
+                    <img src={imageThumb4} className="w-[105px] rounded-2xl cursor-pointer" />
+                    <img src={imageThumb1} className="w-[105px] rounded-2xl cursor-pointer" />
                 </div>
 
             </div>
@@ -53,11 +58,12 @@ const Main = () => {
                         <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity > 10 ? null : addQuantity}>+</button>
                     </div>
 
-                    <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center clickable" onClick={addToCart}>
+                    <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center cursor-pointer" onClick={addToCart}>
                         <button className="flex justify-center items-center text-white"><img src={iconCart} className="text-white mr-3" /> Add to Cart</button>
                     </div>
                 </div>
             </div>
+            {sliderModal && (<SliderModal />)}
         </div>
     )
 }

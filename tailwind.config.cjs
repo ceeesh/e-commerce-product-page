@@ -10,7 +10,8 @@ module.exports = {
         'orange': '#FF6E00',
         'darkgray': '#747C8B',
         'lightgray': '#ededed',
-        'gray': '#ABB2BF'
+        'gray': '#ABB2BF',
+        'opac': '#121212'
       }, 
       animation: {
         'slideDown': 'slide-down 400ms forwards;'
