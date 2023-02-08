@@ -14,7 +14,7 @@ const Header = () => {
   }
   
   return (
-    <div className="container flex w-full text-center items-center mx-36 border-b-[1px] h-28 border-gray">
+    <div className="flex text-center items-center mx-36 border-b-[1px] h-28 border-gray">
       <div>
         <a href="#"> <img src={logo} /></a>
       </div>

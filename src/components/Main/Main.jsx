@@ -43,7 +43,7 @@ const Main = () => {
         <div className="container mt-24 mx-40 w-full h-max flex justify-between font-semibold gap-20">
             <div className="flex flex-col w-[40%]">
                 <div className="">
-                    <img src={slides[currentIndex]} className="w-full rounded-3xl cursor-pointer" onClick={openModal} />
+                    <img src={slides[currentIndex]} className="w-full rounded-3xl cursor-pointer " onClick={openModal} />
                 </div>
                 <div className="flex w-full justify-between mt-7 ">
                     {slides.map((slide, index) => (
@@ -53,12 +53,12 @@ const Main = () => {
 
             </div>
             <div className="w-[60%] flex flex-col p-5 m-10">
-                <p className="text-base text-orange font-medium pb-4">SNEAKER COMPANY</p>
+                <p className="text-base text-orange font-large pb-4">SNEAKER COMPANY</p>
                 <h1 className="text-6xl font-bold pb-4">Fall Limited Edition Sneakers</h1>
                 <p className="text-darkgray font-normal pb-4">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
                 <span className="flex text-center items-center pb-4">
-                    <p className="font-bold text-2xl ">$125.00</p>
-                    <p className="text-orange font-medium text-xl ">50%</p>
+                    <p className="font-black text-2xl ">$125.00</p>
+                    <p className="text-orange font-large text-xl bg-lightorange ml-2 rounded p-1 text-[1rem]">50%</p>
                 </span>
                 <span className="text-gray pb-2">$250.00</span>
                 <div className="flex w-full">

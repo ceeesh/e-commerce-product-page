@@ -40,13 +40,13 @@ const SliderModal = () => {
     }
 
     return (
-        <div className="absolute top-0 right-0 h-screen w-full  bg-opac opacity-95 flex justify-center items-center flex-col ">
+        <div className="absolute top-0 right-0 h-screen w-full  bg-opac  flex justify-center items-center flex-col ">
             <div className="flex justify-end items-end w-2/5">
-                <img src={close} onClick={closeModal} className="cursor-pointer"/>
+                <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center"> <img src={close} onClick={closeModal} className="cursor-pointer" /></div>
             </div>
             <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className="w-[30rem] h-[30rem] rounded-2xl bg-center bg-cover duration-500 flex justify-between items-center">
-                <img src={prev} className="cursor-pointer" onClick={prevSlide} />
-                <img src={next} className="cursor-pointer" onClick={nextSlide} />
+                <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center"> <img src={prev} className="cursor-pointer" onClick={prevSlide} /></div>
+                <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center"> <img src={next} className="cursor-pointer" onClick={nextSlide} /></div>
             </div>
 
             <div className="flex justify-center py-2">
@@ -56,7 +56,7 @@ const SliderModal = () => {
                         onClick={(() => goToSlide(slideIndex))}
                         className="flex w-full mt-7 mx-[0.6rem]"
                     >
-                        <img src={slide} className="w-[105px] rounded-2xl cursor-pointer"/>
+                        <img src={slide} className="w-[105px] rounded-2xl cursor-pointer" />
                     </div>
                 ))}
             </div>
