@@ -14,7 +14,7 @@ const Header = () => {
   }
   
   return (
-    <div className="flex text-center items-center mx-36 border-b-[1px] h-28 border-gray">
+    <div className="container max-w-[calc(100% - 9rem)] mx-auto flex text-center items-center border-b-[1px] h-28 border-gray">
       <div>
         <a href="#"> <img src={logo} /></a>
       </div>
@@ -22,19 +22,19 @@ const Header = () => {
       <nav className="w-full ml-8">
         <ul className="flex ">
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#">Collections</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Collections</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#">Men</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Men</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#">Women</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Women</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#">About</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">About</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#">Contract</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Contract</a>
           </li>
         </ul>
       </nav>
@@ -44,7 +44,7 @@ const Header = () => {
           <button onClick={openModal}><img src={iconCart} className="w-[25px]" />
           {cartNum === 0 ? null : (<span className="absolute top-9 text-xs bg text-white bg-orange w-5 rounded">{cartNum}</span>)}
           </button>
-          <button className="ml-7"><img src={avatar} className="w-[45px]" /></button>
+          <button className="ml-7 hover:border-2 border-orange rounded-full transition-all"><img src={avatar} className="w-[45px]" /></button>
         </ul>
       </div>
       {cart && (

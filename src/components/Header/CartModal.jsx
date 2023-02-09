@@ -4,10 +4,12 @@ import deleteIcon from '../../../images/icon-delete.svg'
 import { Context } from '../context/context'
 
 const CartModal = () => {
-    const { cartNum, setCartNum, amount, setAmount, quantity } = useContext(Context)
+    const { cartNum, setCartNum, amount, setAmount, quantity, setQuantity, sliderModal } = useContext(Context)
 
     const emptyCart = () => {
         setCartNum(0)
+        setAmount(125.00)
+        setQuantity(1)
     }
 
     useEffect(() => {
@@ -15,7 +17,7 @@ const CartModal = () => {
     }, [cartNum])
 
     return (
-        <div className="container absolute right-60 top-24 shadow-2xl bg-white w-[20rem] h-[13rem] rounded flex flex-col text-left shadow-gray-900 z-10 ">
+        <div className={`container absolute right-60 top-24 shadow-2xl bg-white w-[20rem] h-[13rem] rounded flex flex-col text-left shadow-gray-900 z-10`}>
             <div className="border-b-2 p-4 border-gray">
                 <p>Cart</p>
             </div>
@@ -29,7 +31,7 @@ const CartModal = () => {
                         <p className="text-darkgray font-normal text-[0.9rem]">Fall Limited Edition Sneakers $125.00 x <span> {cartNum} </span> <span className="font-bold text-black">${amount}</span></p>
                         <img src={deleteIcon} className="block cursor-pointer" onClick={emptyCart} />
                     </div>
-                    <button className="w-full bg-orange rounded text-white p-3">Checkout</button>
+                    <button className="w-full bg-orange rounded text-white p-3 transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orpac duration-500 " >Checkout</button>
                 </div>
             )}
 

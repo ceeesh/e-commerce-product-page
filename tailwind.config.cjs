@@ -12,7 +12,8 @@ module.exports = {
         'lightgray': '#ededed',
         'gray': '#ABB2BF',
         'opac': 'rgba(0, 0, 0, 0.70)',
-        'lightorange': '#FFEDE0'
+        'lightorange': '#FFEDE0',
+        'orpac': '#F9AA59'
       }, 
       animation: {
         'slideDown': 'slide-down 400ms forwards;'

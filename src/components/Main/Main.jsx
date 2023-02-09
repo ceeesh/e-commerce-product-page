@@ -17,7 +17,7 @@ const Main = () => {
     const { quantity, setQuantity, cartNum, setCartNum, sliderModal, setSliderModal } = useContext(Context)
     const slides = [image1, image2, image3, image4]
     const [currentIndex, setCurrentIndex] = useState(0)
-    
+
     const selectImage = (index) => {
         setCurrentIndex(index)
         console.log(currentIndex)
@@ -40,19 +40,19 @@ const Main = () => {
     }
 
     return (
-        <div className="container mt-24 mx-40 w-full h-max flex justify-between font-semibold gap-20">
+        <div className="container max-w-[calc(100% - 9rem)] mx-auto  mt-24  h-max flex justify-between font-semibold gap-20 ">
             <div className="flex flex-col w-[40%]">
-                <div className="">
-                    <img src={slides[currentIndex]} className="w-full rounded-3xl cursor-pointer " onClick={openModal} />
+                <div className="w-full">
+                    <img src={slides[currentIndex]} className="w-full rounded-3xl cursor-pointer  transform transition-all hover:scale-90 hover:shadow-2xl duration-500" onClick={openModal} />
                 </div>
-                <div className="flex w-full justify-between mt-7 ">
+                <div className="flex justify-between mt-7 w-full">
                     {slides.map((slide, index) => (
-                        <img src={slide} key={index} className="w-[105px] rounded-2xl cursor-pointer" onClick={() => selectImage(index)}/>
+                        <img src={slide} key={index} className="w-[22%] rounded-2xl cursor-pointer mx-2  transform transition-all hover:scale-110 hover:shadow-2xl duration-500" onClick={() => selectImage(index)} />
                     ))}
                 </div>
 
             </div>
-            <div className="w-[60%] flex flex-col p-5 m-10">
+            <div className="w-[60%] flex flex-col p-5 m-10 ">
                 <p className="text-base text-orange font-large pb-4">SNEAKER COMPANY</p>
                 <h1 className="text-6xl font-bold pb-4">Fall Limited Edition Sneakers</h1>
                 <p className="text-darkgray font-normal pb-4">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
@@ -68,7 +68,7 @@ const Main = () => {
                         <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity > 10 ? null : addQuantity}>+</button>
                     </div>
 
-                    <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center cursor-pointer" onClick={addToCart}>
+                    <div className="w-[35%] bg-orange flex h-14 rounded-xl justify-center items-center cursor-pointer  transform transition-all hover:scale-110 hover:shadow-2xl hover:bg-orpac duration-500" onClick={addToCart}>
                         <button className="flex justify-center items-center text-white"><img src={iconCart} className="text-white mr-3" /> Add to Cart</button>
                     </div>
                 </div>
