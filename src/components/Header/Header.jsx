@@ -14,27 +14,27 @@ const Header = () => {
   }
   
   return (
-    <div className="container max-w-[calc(100% - 9rem)] mx-auto flex text-center items-center border-b-[1px] h-28 border-gray">
+    <div className="container max-w-[calc(100% - 9rem)] mx-0 md:mx-auto flex text-center items-center h-28 lg:border-b-[1px] border-gray overflow-x-hidden">
       <div>
-        <a href="#"> <img src={logo} /></a>
+        <a href="#"> <img src={logo} /></a> 
       </div>
 
-      <nav className="w-full ml-8">
+      <nav className="w-full">
         <ul className="flex ">
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Collections</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-300 pb-11">Collections</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Men</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-300 pb-11">Men</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Women</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-300 pb-11">Women</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">About</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-300 pb-11">About</a>
           </li>
           <li className='mx-4 text-darkgray font-thin'>
-            <a href="#" className="hover:border-b-2 border-orange transition-all duration-100">Contract</a>
+            <a href="#" className="hover:border-b-2 border-orange transition-all duration-300 pb-11">Contract</a>
           </li>
         </ul>
       </nav>

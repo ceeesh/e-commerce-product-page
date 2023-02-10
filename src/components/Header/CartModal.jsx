@@ -34,8 +34,6 @@ const CartModal = () => {
                     <button className="w-full bg-orange rounded text-white p-3 transform transition-all hover:scale-105 hover:shadow-2xl hover:bg-orpac duration-500 " >Checkout</button>
                 </div>
             )}
-
-
         </div>
     )
 }
