@@ -4,18 +4,21 @@ import iconCart from '../../../images/icon-cart.svg'
 import avatar from '../../../images/image-avatar.png'
 import { Context } from '../context/context'
 import CartModal from './CartModal'
+import burgMenu from '../../../images/icon-menu.svg'
 
 const Header = () => {
   const { quantity, setQuantity, cartNum, setCartNum, } = useContext(Context)
   const [cart, setCart] = useState(false)
+  const [menu, setMenu] = useState(false)
 
   const openModal = () => {
     setCart(prevState => !prevState)
   }
   
   return (
-    <div className="container max-w-[calc(100% - 9rem)] mx-0 md:mx-auto flex text-center items-center h-28 lg:border-b-[1px] border-gray overflow-x-hidden">
-      <div className="m-auto md:m-0">
+    <div className="container max-w-[calc(100% - 9rem)] mx-0 md:mx-auto justify-between flex text-center items-center h-28 lg:border-b-[1px] border-gray overflow-x-hidden">
+      <div className="flex">
+        <img src={burgMenu} className="mx-5 cursor-pointer md:hidden"/>
         <a href="#"> <img src={logo} /></a> 
       </div>
 
