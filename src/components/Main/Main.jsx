@@ -35,8 +35,8 @@ const Main = () => {
     }
 
     return (
-        <div className="container xl:max-w-[calc(100% - 9rem)] lg:w-5/5 md:w-10/12 m-0 sm:mx-auto md:mx-12 lg:mx-auto mt-10 md:mt-24 
-        h-max md:flex-row flex flex-col justify-between font-semibold gap-20 overflow-y-auto overflow-x-hidden">
+        <div className={`container xl:max-w-[calc(100% - 9rem)] lg:w-5/5 md:w-10/12 m-0 sm:mx-auto md:mx-12 lg:mx-auto mt-10 md:mt-24 
+        h-max md:flex-row flex flex-col justify-between font-semibold gap-20 overflow-y-auto overflow-x-hidden sm:h-fit ${sliderModal ? `h-20` : null }`}>
             <div className="flex flex-col w-[100%] md:w-[90%] lg:w-[40%]">
                 <div className="w-full">
                     <img src={slides[currentIndex]}
@@ -63,14 +63,14 @@ const Main = () => {
                 </span>
                 <span className="text-gray pb-2 line-through decoration-2">$250.00</span>
                 <div className="flex w-full flex-col lg:flex-row">
-                    <div className="w-full lg:w-[50%] bg-lightgray flex justify-between h-14 rounded-xl mr-8 mb-2">
+                    <div className="w-full lg:w-[30%] bg-lightgray flex justify-between h-14 rounded-xl mr-8 mb-2">
                         <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity < 1 ? null : minusQuantity}>-</button>
                         <span className="w-12 flex justify-center items-center text-1xl h-12">{quantity}</span>
                         <button className="w-12 flex justify-center items-center text-orange text-3xl h-12" onClick={quantity > 10 ? null : addQuantity}>+</button>
                     </div>
 
                     <div
-                        className="w-full lg:w-[50%] bg-orange flex h-14 rounded-xl justify-center md:p-15 items-center cursor-pointer  
+                        className="w-full lg:w-[45%] bg-orange flex h-14 rounded-xl justify-center md:p-15 items-center cursor-pointer  
                     transform transition-all hover:scale-110 hover:shadow-2xl hover:bg-orpac duration-500"
                         onClick={addToCart}>
                         <button className="flex justify-center items-center text-white"><img src={iconCart} className="text-white mr-3" /> Add to Cart</button>

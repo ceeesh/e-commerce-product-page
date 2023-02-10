@@ -40,11 +40,11 @@ const SliderModal = () => {
     }
 
     return (
-        <div className="absolute top-0 right-0 h-screen w-full  bg-opac  flex justify-center items-center flex-col ">
-            <div className="flex justify-end items-end w-2/5 cursor-pointer" onClick={closeModal}>
+        <div className="absolute top-0 right-0 h-screen w-full  bg-opac  flex justify-center items-center flex-col overflow-hidden">
+            <div className="flex justify-end items-end w-5/5 sm:w-2/5 cursor-pointer mb-5" onClick={closeModal}>
                 <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center hover:scale-110 duration-500"> <img src={close}  /></div>
             </div>
-            <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className="w-[30rem] h-[30rem] rounded-2xl bg-center bg-cover duration-500 flex justify-between items-center">
+            <div style={{ backgroundImage: `url(${slides[currentIndex]})` }} className="w-[25rem] sm:w-[30rem] h-[30rem]  rounded-2xl bg-center bg-cover duration-500 flex justify-between items-center">
                 <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center cursor-pointer hover:scale-110 duration-500" onClick={prevSlide} > <img src={prev}  /></div>
                 <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center cursor-pointer hover:scale-110 duration-500" onClick={nextSlide} > <img src={next}  onClick={nextSlide} /></div>
             </div>

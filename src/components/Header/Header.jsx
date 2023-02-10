@@ -15,11 +15,11 @@ const Header = () => {
   
   return (
     <div className="container max-w-[calc(100% - 9rem)] mx-0 md:mx-auto flex text-center items-center h-28 lg:border-b-[1px] border-gray overflow-x-hidden">
-      <div>
+      <div className="m-auto md:m-0">
         <a href="#"> <img src={logo} /></a> 
       </div>
 
-      <nav className="w-full">
+      <nav className="w-full md:block hidden">
         <ul className="flex ">
           <li className='mx-4 text-darkgray font-thin'>
             <a href="#" className="hover:border-b-2 border-orange transition-all duration-300 pb-11">Collections</a>
