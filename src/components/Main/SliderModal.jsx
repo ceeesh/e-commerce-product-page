@@ -40,7 +40,7 @@ const SliderModal = () => {
     }
 
     return (
-        <div className="absolute top-0 right-0 h-screen w-full  bg-opac  flex justify-center items-center flex-col overflow-hidden">
+        <div className="absolute top-0 right-0 h-[60rem] w-full bg-opac flex justify-center items-center flex-col overflow-hidden">
             <div className="flex justify-end items-end w-5/5 sm:w-2/5 cursor-pointer mb-5" onClick={closeModal}>
                 <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center hover:scale-110 duration-500"> <img src={close}  /></div>
             </div>

@@ -6,10 +6,11 @@ import image4 from '../../../images/image-product-4.jpg'
 import iconCart from '../../../images/icon-cart.svg'
 import { Context } from '../context/context'
 import SliderModal from './SliderModal'
+import MenuModal from './MenuModal'
 
 const Main = () => {
 
-    const { quantity, setQuantity, cartNum, setCartNum, sliderModal, setSliderModal } = useContext(Context)
+    const { quantity, setQuantity, cartNum, setCartNum, sliderModal, setSliderModal, menu } = useContext(Context)
     const slides = [image1, image2, image3, image4]
     const [currentIndex, setCurrentIndex] = useState(2)
 
@@ -36,8 +37,8 @@ const Main = () => {
 
     return (
         <div className={`container xl:max-w-[calc(100% - 9rem)] lg:w-5/5 md:w-10/12 m-0 sm:mx-auto md:mx-12 lg:mx-auto mt-10 md:mt-24 
-        h-max md:flex-row flex flex-col justify-between font-semibold gap-20 overflow-y-auto overflow-x-hidden sm:h-fit ${sliderModal ? `h-20` : null }`}>
-            <div className="flex flex-col w-[100%] md:w-[90%] lg:w-[40%]">
+        h-screen md:flex-row flex flex-col justify-between font-semibold gap-20 overflow-y-auto overflow-x-hidden sm:h-fit ${sliderModal ? `h-[50rem]` : null} ${menu ? `sm:mx-0` : null}`}>
+            <div className="flex flex-col w-[100%] md:w-[90%] lg:w-[40%] mb-5">
                 <div className="w-full">
                     <img src={slides[currentIndex]}
                         className="w-full cursor-pointer sm:rounded-2xl transform transition-all hover:scale-90 hover:shadow-2xl duration-500"
@@ -78,6 +79,7 @@ const Main = () => {
                 </div>
             </div>
             {sliderModal && (<SliderModal />)}
+            {menu && (<MenuModal />)}
         </div>
     )
 }

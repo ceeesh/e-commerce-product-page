@@ -17,7 +17,7 @@ const CartModal = () => {
     }, [cartNum])
 
     return (
-        <div className={`container absolute right-60 top-24 shadow-2xl bg-white w-[20rem] h-[13rem] rounded flex flex-col text-left shadow-gray-900 z-10`}>
+        <div className={`container absolute right-10 2xl:right-60 top-24 shadow-2xl bg-white w-[20rem] h-[13rem] rounded flex flex-col text-left shadow-gray-900 z-10`}>
             <div className="border-b-2 p-4 border-gray">
                 <p>Cart</p>
             </div>
